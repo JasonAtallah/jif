@@ -1,9 +1,0 @@
-{
-    "scripts": {
-        "start": "python app.py",
-        "lint": "black .",
-        "test": "python -m unittest discover"
-    },
-    "requirements": "requirements.txt",
-    "dev_requirements": "dev_requirements.txt"
-}
