@@ -1,9 +1,14 @@
 {
     "scripts": {
-        "hi": "echo bye"
+        "start": "python main.py",
+        "lint": "black .",
+        "test": "python -m unittest discover"
     },
+    "requirements": "requirements.txt",
+    "dev_requirements": "dev_requirements.txt",
     "dependencies": {
         "black": "19.10b0",
         "fire": "0.2.1"
-    }
+    },
+    "dev_dependencies": {}
 }
