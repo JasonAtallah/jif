@@ -6,7 +6,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="jif",
-    version="0.0.1",
+    version="0.0.2",
     description="CLI tool to run scipts",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -22,5 +22,5 @@ setup(
     packages=["jif"],
     include_package_data=True,
     install_requires=[],
-    entry_points={"console_scripts": ["jif=jif.__main__:main",]},
+    entry_points={"console_scripts": ["jif=jif.__init__:main",]},
 )
