@@ -7,9 +7,6 @@ def write_to_file(filename, package):
 
 
 def install(self, *args, **kwargs):
-    '''
-    install command for jif
-    '''
     for package in args:
         os.system(f"python -m pip install {package}")
 
