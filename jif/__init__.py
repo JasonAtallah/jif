@@ -1,7 +1,5 @@
 import fire
-import json
 import logging
-import os
 
 from jif.commands.init import init
 from jif.commands.install import install

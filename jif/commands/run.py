@@ -1,24 +1,25 @@
 import logging
 import os
 
-from jif.jif_file import jif_file
+from jif.helpers.jif_file import load_jif_file
 
 logger = logging.getLogger("jif")
 
 
-def start(self):
+def start():
     run("start")
 
 
-def test(self):
+def test():
     run("test")
 
 
-def lint(self):
+def lint():
     run("lint")
 
 
-def run(self, script_name):
+def run(script_name):
+    jif_file = load_jif_file()
     script = jif_file["scripts"].get(script_name, False)
 
     if script:
