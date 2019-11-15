@@ -20,6 +20,7 @@ def gen_requirements(kwargs):
 def create_jif_dict(kwargs):
     author = kwargs.get("author", False)
     entry_point = kwargs.get("entry_point", "app.py")
+    lint_dir = kwargs.get("lint_dir", ".")
     package_name = kwargs.get("package_name", False)
     version = kwargs.get("version", "0.0.1")
 
@@ -27,18 +28,18 @@ def create_jif_dict(kwargs):
         "version": version,
         "scripts": {
             "start": f"python {entry_point}",
-            "lint": "black .",
+            "lint": f"black {lint_dir}",
             "test": "python -m unittest discover",
         },
         "requirements": gen_requirements(kwargs),
         "dev_requirements": gen_dev_requirements(kwargs),
     }
 
-    if package_name:
-        jif_dict["package_name"] = package_name
-
     if author:
         jif_dict["author"] = author
+
+    if package_name:
+        jif_dict["package_name"] = package_name
 
     return jif_dict
 
