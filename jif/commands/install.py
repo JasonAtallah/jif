@@ -30,7 +30,7 @@ def install(*args, **kwargs):
             elif not file_has_string(dev_requirements, package):
                 write_to_file(dev_requirements, package)
 
-        elif kwargs.get("save"):
+        elif kwargs.get("save") not in [False, "false", "no"]:
             if type(requirements) == list and package not in requirements:
                 jif_dict["requirements"].append(package)
                 save_jif_file(jif_dict)
