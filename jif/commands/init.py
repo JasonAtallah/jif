@@ -1,5 +1,7 @@
 import json
 
+from jif.helpers.jif_file import save_jif_file
+
 
 def gen_dev_requirements(kwargs):
     dev_reqs = kwargs.get("dev_reqs", "dev_requirements.txt")
@@ -46,7 +48,4 @@ def create_jif_dict(kwargs):
 
 def init(**kwargs):
     jif_dict = create_jif_dict(kwargs)
-    indent = kwargs.get("indent", 4)
-
-    with open("jif.json", "w") as json_file:
-        json.dump(jif_dict, json_file, indent=indent)
+    save_jif_file(jif_dict)
