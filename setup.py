@@ -19,7 +19,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=["jif", "jif.commands", "jif.helpers"],
+    packages=["jif", "jif.commands"],
     include_package_data=True,
     install_requires=["black", "fire"],
     entry_points={"console_scripts": ["jif=jif.__main__:main",]},

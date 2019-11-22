@@ -15,6 +15,11 @@ def load_jif_file():
         sys.exit()
 
 
+def read_reqs_file(filename):
+    with open(filename, "r") as reqs_file:
+        return reqs_file
+
+
 def save_jif_file(jif_dict):
     with open("jif.json", "w") as json_file:
         json.dump(jif_dict, json_file, indent=4)

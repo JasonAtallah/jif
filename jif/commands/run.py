@@ -1,7 +1,7 @@
 import logging
 import os
 
-from jif.helpers.jif_file import load_jif_file
+from jif.helpers import load_jif_file
 
 logger = logging.getLogger("jif")
 

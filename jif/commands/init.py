@@ -1,6 +1,6 @@
 import json
 
-from jif.helpers.jif_file import save_jif_file
+from jif.helpers import save_jif_file
 
 
 def gen_dev_requirements(kwargs):
