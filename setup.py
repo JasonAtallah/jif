@@ -6,7 +6,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="jif",
-    version="0.0.2",
+    version="0.0.3",
     description="CLI tool to run scipts",
     long_description=README,
     long_description_content_type="text/markdown",
