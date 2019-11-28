@@ -3,26 +3,25 @@ import json
 from jif.helpers import save_jif_file
 
 
-def gen_dev_requirements(kwargs):
-    dev_reqs = kwargs.get("dev_reqs", "dev_requirements.txt")
-
-    if dev_reqs == "inline":
-        return []
-    return dev_reqs
-
-
-def gen_requirements(kwargs):
-    reqs = kwargs.get("reqs", "requirements.txt")
-
-    if reqs == "inline":
-        return []
-    return reqs
-
-
 def create_jif_dict(kwargs):
-    author = kwargs.get("author", False)
+    """
+    Parses flags and builds dict that will be used to create the jif.json
+
+    Args
+        kwargs (Dict): contains flags passed into the init command.
+
+    Returns
+        jif_dict (Dict): dict used to create jif.json.
+    """
+    dev_reqs = kwargs.get("dev_reqs", "dev_requirements.txt")
+    dev_reqs = dev_reqs if dev_reqs != "inline" else []
+    reqs = kwargs.get("reqs", "requirements.txt")
+    reqs = reqs if reqs != "inline" else []
+
     entry_point = kwargs.get("entry_point", "app.py")
     lint_dir = kwargs.get("lint_dir", ".")
+
+    author = kwargs.get("author", False)
     package_name = kwargs.get("package_name", False)
     version = kwargs.get("version", "0.0.1")
 
@@ -47,5 +46,44 @@ def create_jif_dict(kwargs):
 
 
 def init(**kwargs):
-    jif_dict = create_jif_dict(kwargs)
-    save_jif_file(jif_dict)
+    """
+    Run jif init --help for more details
+    """
+    if kwargs.get("help"):
+        init_help()
+    else:
+        jif_dict = create_jif_dict(kwargs)
+        save_jif_file(jif_dict)
+
+
+def init_help():
+    print(
+        """
+    \n
+    "init" command is used for creating a jif.json.\n
+    Optional flags:
+        1) --entry-point: use this flag to point to the module that should run when calling the start command.
+        - Default: app.py
+
+        2) --lint-dir: use this flag to tell jif which directory should be linted.
+        - Default: .
+
+        3) --reqs: location of your requirements file.
+        - Set reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --reqs inline)
+        - Default: requirements.txt
+
+        4) --dev-reqs: location of your dev requirements file.
+        - Set dev reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --dev-reqs inline)
+        - Default: dev_requirements.txt
+
+        5) --author: credits author.
+        - Default: None, omitted unless value is specified.
+
+        6) --version: which version your package is at.
+        - Default: 0.0.1
+
+        7) --package-name: name of your package.
+        - Default: None, omitted unless value is specified.
+        \n
+    """
+    )

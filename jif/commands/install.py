@@ -56,4 +56,3 @@ def install(*args, **kwargs):
             args = get_reqs(requirements)
 
     install_packages(args, kwargs, dev_requirements, requirements, jif_dict)
-
