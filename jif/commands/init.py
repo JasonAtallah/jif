@@ -1,6 +1,9 @@
 import json
+import logging
 
 from jif.helpers import save_jif_file
+
+logger = logging.getLogger("jif")
 
 
 def create_jif_dict(kwargs):
@@ -57,7 +60,7 @@ def init(**kwargs):
 
 
 def init_help():
-    print(
+    logger.info(
         """
     \n
     "init" command is used for creating a jif.json.\n
