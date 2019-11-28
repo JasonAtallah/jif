@@ -1,5 +1,29 @@
+import logging
 import os
 
 
+logger = logging.getLogger("jif")
+
+
 def freeze(**kwargs):
-    os.system("pip freeze > requirements.txt")
+    """
+    The freeze command just runs 'pip freeze > requirements.txt'.
+    Nothing more, nothing less.
+    'f' is also a shorthand for freeze
+    """
+    if kwargs.get('help'):
+        freeze_help()
+    else:
+        os.system("pip freeze > requirements.txt")
+
+
+def freeze_help():
+    logger.info(
+        """
+    \n
+    The freeze command just runs 'pip freeze > requirements.txt'.
+    Nothing more, nothing less.
+    'f' is also a shorthand for freeze
+    \n
+    """
+    )

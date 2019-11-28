@@ -35,8 +35,8 @@ def create_jif_dict(kwargs):
             "lint": f"black {lint_dir}",
             "test": "python -m unittest discover",
         },
-        "requirements": gen_requirements(kwargs),
-        "dev_requirements": gen_dev_requirements(kwargs),
+        "requirements": reqs,
+        "dev_requirements": dev_reqs,
     }
 
     if author:
@@ -87,6 +87,6 @@ def init_help():
 
         7) --package-name: name of your package.
         - Default: None, omitted unless value is specified.
-        \n
+    \n
     """
     )

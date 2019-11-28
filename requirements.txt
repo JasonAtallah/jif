@@ -1,2 +1,12 @@
-black
-fire
+appdirs==1.4.3
+attrs==19.3.0
+black==19.10b0
+Click==7.0
+fire==0.2.1
+jif==0.0.4
+pathspec==0.6.0
+regex==2019.11.1
+six==1.13.0
+termcolor==1.1.0
+toml==0.10.0
+typed-ast==1.4.0

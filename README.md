@@ -42,29 +42,39 @@ The `init` command creates the jif file (`jif.json`) that the other commands use
 
 ##### Optional flags
 1) `--entry-point`: use this flag to point to the module that should run when calling the start command.
-        - Default: app.py
+        - Default: `app.py`
 > 
 2) `--lint-dir`: use this flag to tell jif which directory should be linted.
-        - Default: .
+        - Default: `.`
 >
 3) `--reqs`: location of your requirements file.
         - Set reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --reqs inline)
-        - Default: requirements.txt
+        - Default: `requirements.txt`
 >
 4) `--dev-reqs`: location of your dev requirements file.
         - Set dev reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --dev-reqs inline)
-        - Default: dev_requirements.txt
+        - Default: `dev_requirements.txt`
 >
 5) `--author`: credits author.
         - Default: None, omitted unless value is specified.
 >
 6) `--version`: which version your package is at.
-        - Default: 0.0.1
+        - Default: `0.0.1`
 >
 7) `--package-name`: name of your package.
         - Default: None, omitted unless value is specified.
 
+_examples_: `jif init`, `jif init --lint-dir src --entry-point src/
+
+### `run`
+The jif file let's you store scripts which can be executed using the `run` command. There are 3 script names that can omit the `run` keyword:
+1. `start`
+2. `lint`
+3. `test`
+
+_examples_: `jif start`, `jif run my_script`
+
 ### `freeze`
 The `freeze` command literally just calls `pip freeze > requirements.txt`. There are no flags, no customization, just a simple command I use occasionally that saves me a fraction of a second
 
-_usage_: `jif freeze` of `jif f`
+_examples_: `jif freeze`, `jif f`
