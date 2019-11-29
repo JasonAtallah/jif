@@ -40,6 +40,9 @@ def write_to_file(filename, package):
 
 
 def install(*args, **kwargs):
+    """
+    Work in progress. There are known bugs with the file management.
+    """
     jif_dict = load_jif_file()
     dev_requirements = jif_dict.get("dev_requirements", "dev_requirements.txt")
     requirements = jif_dict.get("requirements", "requirements.txt")

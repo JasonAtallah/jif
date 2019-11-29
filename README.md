@@ -66,6 +66,12 @@ The `init` command creates the jif file (`jif.json`) that the other commands use
 
 _examples_: `jif init`, `jif init --lint-dir src --entry-point src/
 
+### `install`
+Work in progress. There are known bugs with the file management.
+
+### `uninstall`
+Work in progress. Currently doesn't remove packages from requirements file or jif file.
+
 ### `run`
 The jif file let's you store scripts which can be executed using the `run` command. There are 3 script names that can omit the `run` keyword:
 1. `start`
