@@ -54,9 +54,10 @@ def init(**kwargs):
     """
     if kwargs.get("help"):
         init_help()
-    else:
-        jif_dict = create_jif_dict(kwargs)
-        save_jif_file(jif_dict)
+        return
+
+    jif_dict = create_jif_dict(kwargs)
+    save_jif_file(jif_dict)
 
 
 def init_help():

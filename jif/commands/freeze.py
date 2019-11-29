@@ -11,10 +11,11 @@ def freeze(**kwargs):
     Nothing more, nothing less.
     'f' is also a shorthand for freeze
     """
-    if kwargs.get('help'):
+    if kwargs.get("help"):
         freeze_help()
-    else:
-        os.system("pip freeze > requirements.txt")
+        return
+
+    os.system("pip freeze > requirements.txt")
 
 
 def freeze_help():
