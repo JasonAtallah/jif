@@ -15,13 +15,13 @@ def main():
     fire.Fire(
         {
             "init": init,
-            "install": install,
-            "i": install,
+            # "install": install,
+            # "i": install,
             "lint": lint,
             "run": run,
             "start": start,
             "test": test,
-            "uninstall": uninstall,
+            # "uninstall": uninstall,
             "freeze": freeze,
             "f": freeze,
         }

@@ -72,22 +72,20 @@ def init_help():
         2) --lint-dir: use this flag to tell jif which directory should be linted.
         - Default: .
 
-        3) --reqs: location of your requirements file.
-        - Set reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --reqs inline)
-        - Default: requirements.txt
-
-        4) --dev-reqs: location of your dev requirements file.
-        - Set dev reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --dev-reqs inline)
-        - Default: dev_requirements.txt
-
-        5) --author: credits author.
+        3) --author: credits author.
         - Default: None, omitted unless value is specified.
 
-        6) --version: which version your package is at.
+        4) --version: which version your package is at.
         - Default: 0.0.1
 
-        7) --package-name: name of your package.
+        5) --package-name: name of your package.
         - Default: None, omitted unless value is specified.
     \n
     """
+        # 3) --reqs: location of your requirements file.
+        #     - Set reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --reqs inline)
+        #     - Default: requirements.txt
+        #     4) --dev-reqs: location of your dev requirements file.
+        #     - Set dev reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --dev-reqs inline)
+        #     - Default: dev_requirements.txt
     )
