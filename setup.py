@@ -6,12 +6,12 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="jif",
-    version="0.0.4",
+    version="0.0.5",
     description="CLI tool to run scipts",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/JasonAtallah/jif",
-    download_url="https://github.com/JasonAtallah/jif/archive/v0.0.4.tar.gz",
+    download_url="https://github.com/JasonAtallah/jif/archive/v0.0.5.tar.gz",
     author="Jason Atallah",
     author_email="jason.atallah@gmail.com",
     license="MIT",
