@@ -49,13 +49,16 @@ def run(script_name=None, **kwargs):
 def run_help():
     logger.info(
         """
-    \n
-    The jif file let's you store scripts which can be executed using the run command. There are 3 script names that can omit the run keyword:
-    1. start
-    2. lint
-    3. test
-    \n
-    examples: jif start, jif run my_script
-    \n
-    """
+        \n
+        The jif file let's you store scripts which can be executed using the run command. There are 3 script names that can omit the run keyword:
+        1. start
+        2. lint
+        3. test
+        \n
+
+        Examples
+            jif start
+            jif run my_script
+        \n
+        """
     )

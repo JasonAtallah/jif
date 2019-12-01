@@ -40,9 +40,6 @@ If you want more details about a specific command, run `jif <COMMAND> --help`.
 1. `init`
 2. `run`
 3. `freeze`
-
-_Coming soon_
-
 4. `install`
 5. `uninstall`
 
@@ -60,10 +57,6 @@ The `init` command creates the jif file (`jif.json`) that the other commands use
 | `--author`      | Credits author.                                                                      | None, omitted unless value is specified. |
 | `--package`     | Name of your package.                                                                | None, omitted unless value is specified. |
 
-<!-- 3. `--reqs`: location of your requirements file. - Set reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --reqs inline) - Default: `requirements.txt` -->
-
-<!-- 4. `--dev-reqs`: location of your dev requirements file. - Set dev reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --dev-reqs inline) - Default: `dev_requirements.txt` -->
-
 _examples_: `jif init`, `jif init --lint-dir src --entry-point src/main.py`
 
 ### `run`
@@ -78,3 +71,13 @@ _examples_: `jif start`, `jif run my_script`
 The `freeze` command literally just calls `pip freeze > requirements.txt`. There are no flags, no customization, just a simple command that saves me a fraction of a second. This is just a workaround while the `install` command is being implemented
 
 _examples_: `jif freeze`, `jif f`
+
+### `install`
+
+The `install` command uses pip to install packages and then automatically manages them for you in your jif file.
+
+##### Optional flags
+
+There are two optional flags that can be added to the end of your install command - `--no-save` and `--dev`. By default, when package(s) are installed they will be added to the requirements array in the jif file. If you add `--dev`, it will save all those packages to the dev requirements array. If you want to install a package without saving it anywhere, add `--no-save` to the end of your install command.
+
+_examples_: `jif install flask`, `jif install black autopep8 --dev`, `jif install black --no-save`

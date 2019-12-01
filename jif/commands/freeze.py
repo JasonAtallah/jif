@@ -21,10 +21,14 @@ def freeze(**kwargs):
 def freeze_help():
     logger.info(
         """
-    \n
-    The freeze command just runs 'pip freeze > requirements.txt'.
-    Nothing more, nothing less.
-    'f' is also a shorthand for freeze
-    \n
-    """
+        \n
+        The freeze command just runs 'pip freeze > requirements.txt'.
+        Nothing more, nothing less.
+        'f' is also a shorthand for freeze
+
+        Examples
+            jif freeze
+            jif f
+        \n
+        """
     )

@@ -58,23 +58,28 @@ def init(**kwargs):
 def init_help():
     logger.info(
         """
-    \n
-    "init" command is used for creating a jif.json.\n
-    Optional flags:
-        1) --entry-point: use this flag to point to the module that should run when calling the start command.
-        - Default: app.py
+        \n
+        "init" command is used for creating a jif.json.\n
 
-        2) --lint-dir: use this flag to tell jif which directory should be linted.
-        - Default: .
+        Optional flags
+            1) --entry-point: use this flag to point to the module that should run when calling the start command.
+            - Default: app.py
 
-        3) --author: credits author.
-        - Default: None, omitted unless value is specified.
+            2) --lint-dir: use this flag to tell jif which directory should be linted.
+            - Default: .
 
-        4) --version: which version your package is at.
-        - Default: 0.0.1
+            3) --author: credits author.
+            - Default: None, omitted unless value is specified.
 
-        5) --package-name: name of your package.
-        - Default: None, omitted unless value is specified.
-    \n
-    """
+            4) --version: which version your package is at.
+            - Default: 0.0.1
+
+            5) --package-name: name of your package.
+            - Default: None, omitted unless value is specified.
+
+        Examples
+            jif init
+            jif init --lint-dir src --entry-point src/main.py
+        \n
+        """
     )
