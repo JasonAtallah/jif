@@ -21,7 +21,7 @@ def main():
             "run": run,
             "start": start,
             "test": test,
-            # "uninstall": uninstall,
+            "uninstall": uninstall,
             "freeze": freeze,
             "f": freeze,
         }
