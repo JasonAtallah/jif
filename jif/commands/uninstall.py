@@ -35,6 +35,7 @@ def uninstall(*args, **kwargs):
 
     save_jif_file(new_jif_dict)
 
+
 def uninstall_help():
     logger.info(
         """

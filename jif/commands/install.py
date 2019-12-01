@@ -2,7 +2,7 @@ import json
 import logging
 import os
 
-from jif.helpers import load_jif_file, read_reqs_file, save_jif_file
+from jif.helpers import load_jif_file, save_jif_file
 
 logger = logging.getLogger("jif")
 
