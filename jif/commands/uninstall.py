@@ -24,4 +24,3 @@ def uninstall(*args, **kwargs):
             new_jif_dict["requirements"] = requirements
 
     save_jif_file(new_jif_dict)
-
