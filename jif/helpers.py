@@ -6,6 +6,10 @@ logger = logging.getLogger("jif")
 
 
 def load_jif_file():
+    """
+    Loads jif file in current directory.
+    If file doesn't exist, will throw an error and end execution.
+    """
     try:
         jif_file = json.load(open("jif.json"))
         return jif_file
