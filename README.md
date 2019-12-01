@@ -39,9 +39,8 @@ If you want more details about a specific command, run `jif <COMMAND> --help`.
 
 1. `init`
 2. `run`
-3. `freeze`
-4. `install`
-5. `uninstall`
+3. `install`
+4. `uninstall`
 
 ### `init`
 
@@ -65,12 +64,6 @@ The jif file let's you store scripts which can be executed using the `run` comma
 The following scripts can omit the `run` keyword: `start`, `lint` and `test`.
 
 _examples_: `jif start`, `jif run my_script`
-
-### `freeze`
-
-The `freeze` command literally just calls `pip freeze > requirements.txt`. There are no flags, no customization, just a simple command that saves me a fraction of a second. This is just a workaround while the `install` command is being implemented
-
-_examples_: `jif freeze`, `jif f`
 
 ### `install`
 
