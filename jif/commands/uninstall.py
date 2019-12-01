@@ -11,6 +11,9 @@ def uninstall_package(package):
 
 
 def uninstall(*args, **kwargs):
+    """
+    Uninstalls packages (run 'jif uninstall --help' for more details)
+    """
     if kwargs.get("help"):
         uninstall_help()
         return

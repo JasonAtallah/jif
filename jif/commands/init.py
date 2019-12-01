@@ -45,7 +45,7 @@ def create_jif_dict(kwargs):
 
 def init(**kwargs):
     """
-    Run jif init --help for more details
+    Initializes jif file (run 'jif init --help' for more details)
     """
     if kwargs.get("help"):
         init_help()

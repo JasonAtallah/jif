@@ -30,7 +30,7 @@ def lint():
 def run(script_name=None, **kwargs):
     """
     \n
-    Run scripts in the jif file.
+    Runs script in jif file (run 'jif run --help' for more details)
     \n
     """
     if kwargs.get("help"):

@@ -13,7 +13,7 @@ def install_package(package):
 
 def install(*args, **kwargs):
     """
-    Run jif install --help for more details
+    Installs packages (Run 'jif install --help' for more details)
     """
 
     if kwargs.get("help"):
