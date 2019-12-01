@@ -16,11 +16,6 @@ def create_jif_dict(kwargs):
     Returns
         jif_dict (Dict): dict used to create jif.json.
     """
-    dev_reqs = kwargs.get("dev_reqs", "dev_requirements.txt")
-    dev_reqs = dev_reqs if dev_reqs != "inline" else []
-    reqs = kwargs.get("reqs", "requirements.txt")
-    reqs = reqs if reqs != "inline" else []
-
     entry_point = kwargs.get("entry_point", "app.py")
     lint_dir = kwargs.get("lint_dir", ".")
 
@@ -35,8 +30,8 @@ def create_jif_dict(kwargs):
             "lint": f"black {lint_dir}",
             "test": "python -m unittest discover",
         },
-        "requirements": reqs,
-        "dev_requirements": dev_reqs,
+        "requirements": [],
+        "dev_requirements": [],
     }
 
     if author:
@@ -82,10 +77,4 @@ def init_help():
         - Default: None, omitted unless value is specified.
     \n
     """
-        # 3) --reqs: location of your requirements file.
-        #     - Set reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --reqs inline)
-        #     - Default: requirements.txt
-        #     4) --dev-reqs: location of your dev requirements file.
-        #     - Set dev reqs to 'inline' if you want your dependecies managed in the jif.json (jif init --dev-reqs inline)
-        #     - Default: dev_requirements.txt
     )
