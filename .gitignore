@@ -2,3 +2,5 @@ venv/
 __pycache__/
 *.pyc
 jif.json
+jif.egg-info/
+jif-*.tar.gz
