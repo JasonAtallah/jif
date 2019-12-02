@@ -46,7 +46,7 @@ _examples_: `jif start`, `jif run my_script`
 
 ### `install`
 
-The `install` command uses pip to install packages and then automatically manages them for you in your jif file.
+The `install` command uses pip to install packages and then automatically manages them for you in your jif file. If the `requirements_file` is present, requirements will be duplicated there so your application isn't dependent on jif. 
 
 ##### Optional flags
 
@@ -56,6 +56,6 @@ _examples_: `jif install flask`, `jif install black autopep8 --dev`, `jif instal
 
 ### `uninstall`
 
-The `uninstall` command will uninstall all packages specified then check to see if they are listed in either the requirements or dev requirements in the jif file. If they are in either, they will be removed.
+The `uninstall` command will uninstall all packages specified then check to see if they are listed in either the requirements or dev requirements in the jif file. If they are in either, they will be removed. If the `dev_requirements_file` is present, requirements will be duplicated there so your application isn't dependent on jif.
 
 _examples_: `jif uninstall flask black autopep`
