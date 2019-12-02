@@ -1,11 +1,12 @@
 import json
 import logging
 import sys
+from typing import Any, Dict
 
 logger = logging.getLogger("jif")
 
 
-def load_jif_file():
+def load_jif_file() -> None:
     """
     Loads jif file in current directory.
     If file doesn't exist, will throw an error and end execution.
@@ -19,7 +20,7 @@ def load_jif_file():
         sys.exit()
 
 
-def read_reqs_file(filename):
+def read_reqs_file(filename: str) -> str:
     """
     Finds, opens and returns file.
 
@@ -33,7 +34,7 @@ def read_reqs_file(filename):
         return reqs_file
 
 
-def save_jif_file(jif_dict):
+def save_jif_file(jif_dict: Dict[str, Any]) -> None:
     """
     Updates jif file with dict passed in.
 
@@ -45,3 +46,19 @@ def save_jif_file(jif_dict):
     """
     with open("jif.json", "w") as json_file:
         json.dump(jif_dict, json_file, indent=4)
+
+
+def update_requirements_file(requirements_file: str, requirements: str) -> None:
+    """
+    Args
+        requirements_file (str)
+        requirements (str)
+    """
+    if requirements_file:
+        reqs_string = ""
+        for req in requirements:
+            reqs_string += f"{req}\n"
+
+        if reqs_string:
+            with open(requirements_file, "w") as f:
+                f.write(reqs_string)

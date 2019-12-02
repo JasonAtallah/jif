@@ -1,12 +1,13 @@
 import json
 import logging
+from typing import Any, Dict
 
 from jif.helpers import save_jif_file
 
 logger = logging.getLogger("jif")
 
 
-def create_jif_dict(kwargs):
+def create_jif_dict(kwargs) -> Dict[str, Any]:
     """
     Parses flags and builds dict that will be used to create the jif.json
 
@@ -32,6 +33,8 @@ def create_jif_dict(kwargs):
         },
         "requirements": [],
         "dev_requirements": [],
+        "requirements_file": "requirements.txt",
+        "dev_requirements_file": "dev_requirements.txt",
     }
 
     if author:

@@ -1,13 +1,13 @@
 import logging
 import os
 
-from jif.helpers import load_jif_file, save_jif_file
+from jif.helpers import load_jif_file, save_jif_file, update_requirements_file
 
 logger = logging.getLogger("jif")
 
 
-def uninstall_package(package):
-    os.system(f"python -m pip uninstall {package}")
+def uninstall_package(package: str) -> None:
+    os.system(f"python -m pip uninstall {package} -y")
 
 
 def uninstall(*args, **kwargs):
@@ -21,17 +21,21 @@ def uninstall(*args, **kwargs):
     jif_dict = load_jif_file()
     new_jif_dict = jif_dict.copy()
     dev_requirements = jif_dict.get("dev_requirements", [])
+    dev_requirements_file = jif_dict.get("dev_requirements_file")
     requirements = jif_dict.get("requirements", [])
+    requirements_file = jif_dict.get("requirements_file")
 
     for package in args:
         uninstall_package(package)
         if package in dev_requirements:
             dev_requirements.remove(package)
             new_jif_dict["dev_requirements"] = dev_requirements
+            update_requirements_file(dev_requirements_file, dev_requirements)
 
         if package in requirements:
             requirements.remove(package)
             new_jif_dict["requirements"] = requirements
+            update_requirements_file(requirements_file, requirements)
 
     save_jif_file(new_jif_dict)
 
