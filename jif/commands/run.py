@@ -42,8 +42,8 @@ def run(script_name=None, **kwargs):
 
     if not script_name:
         for script in scripts:
-            print('\n', script + ":", scripts[script])
-        print('\n')
+            print("\n", script + ":", scripts[script])
+        print("\n")
         return
 
     script = scripts.get(script_name)
