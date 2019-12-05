@@ -38,7 +38,15 @@ def run(script_name=None, **kwargs):
         return
 
     jif_file = load_jif_file()
-    script = jif_file["scripts"].get(script_name, False)
+    scripts = jif_file.get("scripts")
+
+    if not script_name:
+        for script in scripts:
+            print("\n", script + ":", scripts[script])
+        print("\n")
+        return
+
+    script = scripts.get(script_name)
 
     if script:
         os.system(script)
