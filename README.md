@@ -1,15 +1,5 @@
 # jif
 
-jif is a small CLI tool inspired by NPM, more specifically the `npm run` and `npm install` commands. There are no plans to make jif anything more. It is a small tool with a handful of commands that solve pain points I face on a daily basis.
-
-### Why jif?
-
-I've used a package.json to run my Python scripts before. This works fine for me as I have NPM already installed locally. However, it becomes an issue if I want to run a script on a CI/CD machine, a VM created for Python apps or if a collegue who doesn't use Node is working on the application.
-
-**TLDR;** jif started out as a simple CLI tool built in Python to run scripts similar to NPM.
-
----
-
 ## Installation
 
 `python -m pip install jif`
