@@ -1,5 +1,7 @@
 # jif
 
+jif is a simple CLI tool inspired by NPM, more specifically the `npm run` and `npm install` commands.
+
 ## Installation
 
 `python -m pip install jif`
