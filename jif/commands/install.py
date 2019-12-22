@@ -19,7 +19,7 @@ def install_package(package: str) -> None:
     try:
         os.system(f"python -m pip install {package}")
     except:
-        logger.error('Failed to install', package)
+        logger.error("Failed to install", package)
 
 
 def install(*args, **kwargs):
