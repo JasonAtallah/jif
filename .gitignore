@@ -5,3 +5,4 @@ __pycache__/
 jif.json
 jif.egg-info/
 jif-*.tar.gz
+dist/
