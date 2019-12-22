@@ -23,5 +23,6 @@ setup(
     packages=["jif", "jif.commands"],
     include_package_data=True,
     install_requires=["black", "fire"],
+    extras_require={"dev": ["portray"]},
     entry_points={"console_scripts": ["jif=jif.__main__:main",]},
 )
