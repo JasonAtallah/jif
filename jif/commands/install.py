@@ -16,7 +16,10 @@ def gen_requirements_str(reqs):
 
 
 def install_package(package: str) -> None:
-    os.system(f"python -m pip install {package}")
+    try:
+        os.system(f"python -m pip install {package}")
+    except:
+        logger.error("Failed to install", package)
 
 
 def install(*args, **kwargs):

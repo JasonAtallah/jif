@@ -51,8 +51,8 @@ def save_jif_file(jif_dict: Dict[str, Any]) -> None:
 def update_requirements_file(requirements_file: str, requirements: str) -> None:
     """
     Args
-        requirements_file (str)
-        requirements (str)
+        requirements_file (str) name of file to be updated
+        requirements (str) stringified list of requirements
     """
     if requirements_file:
         reqs_string = ""

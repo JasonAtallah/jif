@@ -7,7 +7,10 @@ logger = logging.getLogger("jif")
 
 
 def uninstall_package(package: str) -> None:
-    os.system(f"python -m pip uninstall {package} -y")
+    try:
+        os.system(f"python -m pip uninstall {package} -y")
+    except Exception as e:
+        logger.error(f"{e}\nFailed to uninstall package {package}")
 
 
 def uninstall(*args, **kwargs):
