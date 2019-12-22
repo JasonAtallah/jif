@@ -1,3 +1,5 @@
+[![PyPI version](https://badge.fury.io/py/jif.svg)](https://badge.fury.io/py/jif)
+
 # jif
 
 jif is a small CLI tool inspired by NPM, more specifically the `npm run` and `npm install` commands. There are no plans to make jif anything more. It is a small tool with a handful of commands that solve pain points I face on a daily basis.
