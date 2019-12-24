@@ -1,2 +1,4 @@
 scripts:
   lint: black jif
+  create-dist: python setup.py sdist,
+  upload-to-pypi: twine upload dist/*
