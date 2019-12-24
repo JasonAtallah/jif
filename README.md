@@ -61,3 +61,9 @@ _examples_: `jif install flask`, `jif install black autopep8 --dev`, `jif instal
 The `uninstall` command will uninstall all packages specified then check to see if they are listed in either the requirements or dev requirements in the jif file. If they are in either, they will be removed. If the `dev_requirements_file` is present, requirements will be duplicated there so your application isn't dependent on jif.
 
 _examples_: `jif uninstall flask black autopep`
+
+### `version`
+
+The `version` command will output the current version of jif installed.
+
+_examples_: `jif version`
