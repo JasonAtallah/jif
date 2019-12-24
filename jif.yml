@@ -1,0 +1,2 @@
+scripts:
+  lint: black jif

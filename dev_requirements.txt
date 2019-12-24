@@ -1,3 +1,0 @@
-portray
-jif
-twine
