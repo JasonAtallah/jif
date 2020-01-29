@@ -1,16 +1,17 @@
+import json
 import logging
 import os
 
-from jif.helpers import load_jif_file
+from jif.helpers import load_env_file, load_jif_file
 
 logger = logging.getLogger("jif")
 
 
-def start():
+def start(**kwargs):
     """
     Runs start script
     """
-    run("start")
+    run("start", **kwargs)
 
 
 def test():
@@ -33,6 +34,7 @@ def run(script_name=None, **kwargs):
     Runs script in jif file (run 'jif run --help' for more details)
     \n
     """
+
     if kwargs.get("help"):
         run_help()
         return
@@ -47,6 +49,13 @@ def run(script_name=None, **kwargs):
         return
 
     script = scripts.get(script_name)
+
+    env_dir = jif_file.get("environments_dir")
+    if env_dir:
+        environment = load_env_file(env_dir, kwargs.get("env", "dev"))
+        script = f"ENVIRONMENT='{json.dumps(environment)}' {script}"
+        
+        print(script)
 
     if script:
         os.system(script)

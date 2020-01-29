@@ -6,6 +6,17 @@ from typing import Any, Dict
 logger = logging.getLogger("jif")
 
 
+def load_env_file(env_dir, env):
+    try:
+        env_file = json.load(open(f"{env_dir}/environment.{env}.json"))
+        return env_file
+    except FileNotFoundError as _:
+        logger.error(
+            f"file 'environment.{env}.json' is not in your environments directory"
+        )
+        sys.exit()
+
+
 def load_jif_file() -> None:
     """
     Loads jif file in current directory.
