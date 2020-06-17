@@ -1,3 +1,5 @@
+# THIS LIBRARY IS UNDER HEAVY DEVELOPMENT. EXPECT BUGS, FEEL FREE TO CONTRIBUTE!
+
 [![PyPI version](https://badge.fury.io/py/jif.svg)](https://badge.fury.io/py/jif)
 
 # jif
