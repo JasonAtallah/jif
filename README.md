@@ -1,4 +1,5 @@
-# THIS LIBRARY IS UNDER HEAVY DEVELOPMENT. EXPECT BUGS, FEEL FREE TO CONTRIBUTE!
+~~THIS LIBRARY IS UNDER HEAVY DEVELOPMENT. EXPECT BUGS, FEEL FREE TO CONTRIBUTE!~~
+### Due to the rise and maturing of [Poetry](https://python-poetry.org/) I've deemed this project unnecessary and will stop all development.
 
 [![PyPI version](https://badge.fury.io/py/jif.svg)](https://badge.fury.io/py/jif)
 
